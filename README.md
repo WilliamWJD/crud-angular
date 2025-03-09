@@ -1,59 +1,93 @@
-# ListaDeTarefasAngular
+# CRUD Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+Este projeto é um exemplo de uma aplicação CRUD (Create, Read, Update, Delete) desenvolvida em Angular. Ele demonstra como criar, listar, atualizar e excluir registros em uma interface simples e responsiva.
 
-## Development server
+<img src="./imgProject.png">
 
-To start a local development server, run:
+## Pré-requisitos
 
-```bash
-ng serve
-```
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- [Node.js](https://nodejs.org/) (v16 ou superior)
+- [Angular CLI](https://angular.io/cli) (v15 ou superior)
+- Um editor de código, como [VS Code](https://code.visualstudio.com/)
 
-## Code scaffolding
+## Como Executar o Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Siga os passos abaixo para configurar e executar o projeto localmente:
 
-```bash
-ng generate component component-name
-```
+1. **Clone o repositório:**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   ```bash
+   git clone https://github.com/WilliamWJD/crud-angular.git
+   ```
 
-```bash
-ng generate --help
-```
+2. **Navegue até o diretório do projeto:**
 
-## Building
+   ```bash
+   cd crud-angular
+   ```
 
-To build the project run:
+3. **Instale as dependências:**
 
-```bash
-ng build
-```
+   ```bash
+   npm install
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. **Execute o servidor de desenvolvimento:**
 
-## Running unit tests
+   ```bash
+   ng serve
+   ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+5. **Acesse a aplicação:**
 
-```bash
-ng test
-```
+   Abra o navegador e acesse [http://localhost:4200](http://localhost:4200). A aplicação será carregada automaticamente.
 
-## Running end-to-end tests
+## Estrutura do Projeto
 
-For end-to-end (e2e) testing, run:
+O projeto está organizado da seguinte forma:
 
-```bash
-ng e2e
-```
+- **`src/app/components/`**: Contém os componentes Angular (ex: listagem, formulário).
+- **`src/app/services/`**: Contém os serviços para comunicação com a API ou manipulação de dados.
+- **`src/app/models/`**: Contém as interfaces ou classes de modelos de dados.
+- **`src/assets/`**: Arquivos estáticos como imagens e estilos globais.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Funcionalidades
 
-## Additional Resources
+- **Criar**: Adicionar novos registros.
+- **Ler**: Listar todos os registros existentes.
+- **Atualizar**: Editar registros existentes.
+- **Excluir**: Remover registros.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Tecnologias Utilizadas
+
+- **Angular**: Framework front-end para construção da interface.
+- **TypeScript**: Linguagem principal do projeto.
+- **HTML/CSS**: Estrutura e estilização da aplicação.
+- **RxJS**: Para manipulação de dados assíncronos.
+
+## Contribuição
+
+Contribuições são bem-vindas! Siga os passos abaixo:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua feature:
+   ```bash
+   git checkout -b feature/nova-feature
+   ```
+3. Commit suas alterações:
+   ```bash
+   git commit -m 'Adiciona nova feature'
+   ```
+4. Faça push para a branch:
+   ```bash
+   git push origin feature/nova-feature
+   ```
+5. Abra um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+
+Se precisar de mais alguma coisa, sinta-se à vontade para entrar em contato ou abrir uma issue no repositório! 🚀
