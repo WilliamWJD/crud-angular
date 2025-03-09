@@ -3,10 +3,11 @@ import { TaskService } from '../../services/task.service';
 import { Tarefa } from '../../../Tarefa';
 import { CommonModule } from '@angular/common';
 import { TaskItemComponent } from '../task-item/task-item.component';
+import { AddTaskComponent } from '../add-task/add-task.component';
 
 @Component({
   selector: 'app-tasks',
-  imports: [CommonModule, TaskItemComponent],
+  imports: [CommonModule, TaskItemComponent, AddTaskComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
 })
@@ -27,8 +28,14 @@ export class TasksComponent implements OnInit {
     });
   }
 
-  toggleConcluido(tarefa: Tarefa){
-    tarefa.concluido = !tarefa.concluido
+  toggleConcluido(tarefa: Tarefa) {
+    tarefa.concluido = !tarefa.concluido;
     this.taskService.updateTask(tarefa).subscribe();
+  }
+
+  addTask(tarefa: Tarefa) {
+    this.taskService.addTask(tarefa).subscribe((tarefa) => {
+      this.tarefas.push(tarefa);
+    });
   }
 }
