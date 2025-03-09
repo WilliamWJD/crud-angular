@@ -21,4 +21,10 @@ export class TaskService {
       `${this.apiUrl}/${this.endpoint}/${tarefa.id}`
     );
   }
+
+  updateTask(tarefa: Tarefa): Observable<Tarefa> {
+    return this.http.put<Tarefa>(
+      `${this.apiUrl}/${this.endpoint}/${tarefa.id}`, tarefa
+    );
+  }
 }
