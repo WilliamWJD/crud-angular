@@ -1,4 +1,17 @@
-<form (ngSubmit)="onSubmit()">
+@if(mostrarAddTarefa){
+<app-button text="Fechar" color="red" (btnClick)="alteraVisualizacao(false)"
+  >Fechar</app-button
+>
+}@else {
+<app-button
+  text="Adicionar Tarefa"
+  color="green"
+  (btnClick)="alteraVisualizacao(true)"
+  >Abrir</app-button
+>
+}
+
+<form (ngSubmit)="onSubmit()" *ngIf="mostrarAddTarefa" class="add-form">
   <div>
     <label for="text">Tarefa:</label>
     <input
