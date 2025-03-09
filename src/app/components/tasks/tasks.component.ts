@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 import { Tarefa } from '../../../Tarefa';
 import { CommonModule } from '@angular/common';
-import { TaskItemComponent } from "../task-item/task-item.component";
+import { TaskItemComponent } from '../task-item/task-item.component';
 
 @Component({
   selector: 'app-tasks',
@@ -18,6 +18,12 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((dado) => {
       this.tarefas = dado;
+    });
+  }
+
+  deleteTask(tarefa: Tarefa) {
+    this.taskService.deleteTask(tarefa).subscribe(() => {
+      this.tarefas = this.tarefas.filter((t) => t.id !== tarefa.id);
     });
   }
 }
